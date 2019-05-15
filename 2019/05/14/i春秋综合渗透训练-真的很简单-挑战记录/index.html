@@ -133,7 +133,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/timu2.png">
 <meta property="og:image" content="http://yoursite.com/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/timu3.png">
 <meta property="og:image" content="http://yoursite.com/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/endend.png">
-<meta property="og:updated_time" content="2019-05-15T00:41:10.133Z">
+<meta property="og:updated_time" content="2019-05-15T04:24:13.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="i春秋综合渗透训练-真的很简单-挑战记录">
 <meta name="twitter:description" content="这个题真的很坑,因为没有提示,无从下手。 各种操作无效后,看了看大佬的文章,大佬做的时间早,实验手册中竟然有个网址让去下载漏洞利用工具 1234567891011大佬的实验手册实验环境操作机：Windows XP [172.16.11.2]目标网址：www.test.ichunqiu  [172.16.12.2]实验工具：中国菜刀实验目标：获取www.test.ichunqiu网站的FLAG信息，">
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-15 08:41:10" itemprop="dateModified" datetime="2019-05-15T08:41:10+08:00">2019-05-15</time>
+                <time title="修改时间：2019-05-15 12:24:13" itemprop="dateModified" datetime="2019-05-15T12:24:13+08:00">2019-05-15</time>
               
             
           </span>
@@ -500,7 +500,7 @@
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/md51.png" alt="你想输入的替代文字"></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">获得信息</span><br><span class="line"></span><br><span class="line">账号: ichunqiu</span><br><span class="line"></span><br><span class="line">密码: only_system</span><br></pre></td></tr></table></figure>
 <h1 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h1><p>有了账号密码,接下来就是找后台地址了</p>
-<p>在这里利用到了cmd的一个漏洞<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dedeCMS漏洞：mysqli_error_trace.inc 文件里会残留后台路径。</span><br><span class="line">dedeCMS目录中的data/mysqli_error_trace.inc文件，是记录数据库出错信息。一般是用于网站存在错误，系统自动记录在该文件中，进一步说，就是该文件是记录sql错误信息的文件，类似于日志功能，关键是它会记录后台路径。</span><br></pre></td></tr></table></figure></p>
+<p>在这里利用到了dedeCMS的一个漏洞<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dedeCMS漏洞：mysqli_error_trace.inc 文件里会残留后台路径。</span><br><span class="line">dedeCMS目录中的data/mysqli_error_trace.inc文件，是记录数据库出错信息。一般是用于网站存在错误，系统自动记录在该文件中，进一步说，就是该文件是记录sql错误信息的文件，类似于日志功能，关键是它会记录后台路径。</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/houtai1.png" alt="你想输入的替代文字"></p>
 <p>成功利用漏洞得到了后台地址</p>
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/houtai2.png" alt="你想输入的替代文字"></p>
@@ -530,7 +530,7 @@
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/zhongduan.png" alt="你想输入的替代文字"></p>
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/quanxian.png" alt="你想输入的替代文字"></p>
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/quanxian2.png" alt="你想输入的替代文字"></p>
-<p>果然,发现 authority\system 用户对于 flag 文件的权限是 N，就是没有权限查看。</p>
+<p>果然,发现 system 用户对于 flag 文件的权限是 N，就是没有权限查看。</p>
 <p>修改一下读写权限,然后查看文件,得到<code>flag</code></p>
 <p><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/end.png" alt="你想输入的替代文字"></p>
 <p>菜刀文件管理中也可以查看flag了<br><img src="/2019/05/14/i春秋综合渗透训练-真的很简单-挑战记录/end2.png" alt="你想输入的替代文字"></p>
