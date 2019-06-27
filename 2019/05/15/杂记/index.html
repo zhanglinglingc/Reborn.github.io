@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+  <meta name="description" content="The article has been encrypted, please enter your password to view.">
 <meta name="keywords" content="杂记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杂记">
 <meta property="og:url" content="http://yoursite.com/2019/05/15/杂记/index.html">
 <meta property="og:site_name" content="reb0rn&#39;s blog">
-<meta property="og:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+<meta property="og:description" content="The article has been encrypted, please enter your password to view.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-27T08:58:19.177Z">
+<meta property="og:updated_time" content="2019-06-27T09:44:54.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杂记">
-<meta name="twitter:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
+<meta name="twitter:description" content="The article has been encrypted, please enter your password to view.">
 
 
 
@@ -401,7 +401,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-27 16:58:19" itemprop="dateModified" datetime="2019-06-27T16:58:19+08:00">2019-06-27</time>
+                <time title="Modified: 2019-06-27 17:44:54" itemprop="dateModified" datetime="2019-06-27T17:44:54+08:00">2019-06-27</time>
               
             
           </span>
@@ -453,46 +453,20 @@
       
 
       
-        <script src="/js/crypto-js.js"></script>
-<script>
-function doDecrypt (pwd, onError) {
-	console.log('in doDecrypt');
-	const txt = document.getElementById('enc_content').innerHTML;
-	let plantext;
-	try {
-		const bytes = CryptoJS.AES.decrypt(txt, pwd);
-		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {
-			onError(err);
-		}
-		return;
-	}
-	document.getElementById('enc_content').innerHTML = plaintext;
-	document.getElementById('enc_content').style.display = 'block';
-	document.getElementById('enc_passwd').style.display = 'none';
-	if(typeof MathJax !== 'undefined') {
-		MathJax.Hub.Queue(
-			['resetEquationNumbers', MathJax.InputJax.TeX],
-			['PreProcess', MathJax.Hub],
-			['Reprocess', MathJax.Hub]
-		);
-	}
-}
-</script>
-<div id="enc_content" style="display:none">U2FsdGVkX19rF8NNY8iRShyywLNw00r4nBrWGg7tF5F6kgu6LZF0CyBJiO68QfbWkL2PNyDTuGkUhNL+g4+UpiGWfyhPH/ho5VroyPod0EzASGJvJLT84XHIdEG0YBaZszdb+HaBYLCPBmiOYdpmXUBTGWA6k2GRxyk/8BDhvln3pIA4FMd3ialf039K/3ZHiVXC6sdaSCOmtRgM9Vw2D1NGio/7NlK1c9Hn1Q//uzdC9+YjyBftFK3CulVO1wZi7hyIrhfNOoWGBFvUKqgO/Yks5RdNrqSICu9Rj/Ig5M+P/w6p02VGr4DWYos/pBcDM8eqgZk8jkdq5c1pHAGgFbAP08fS0Nzloqhiv3Z/HQjPclU+PVLlTaSyHsBDl5mKHCxgb3LwAUPthHGdAEYSxZQRGS52SkTgkCU/cD/ZiiEn1FRXOmGPwQREIZN0UAXpSUZ2oBa0hBraaZP/v764AUwDoIi6uvJa7CIPXtsZ28DZPApNKA+ygLlGq10c8hRMSYwb/x8KgEWK5y02RUiSvh58xSaB0Lv+Xkmb1W2ZEkYIyGzduxpmWFHriwQuEBoru3s92BeP4av6dh/0pRDJo+xJoDrdTqwIkRfvFxYN3jfQmUDCk4MsLgIG4lSVrRrIQU3SgwbmsAA1Fdih546Vujr44t5uC+EhoPlCsZ+QKfHPouePLvlInZ0JRU7lyN7ABHqc9PTafwbJGJjUWhoRVDfVJly0oAiG0B+iXp7Ee9Ef5g3COF34ANHkchaldi/7Rm9QQsjbhGaxr6Ws8M+BoXkPKTT9R/zSJuX4VVjfnLulSw855kBUokVdn88EIWuNbQXLGudfTlIJZHyZDDWoibLtDSkc4u/Dd6jcsXPP8hQ0mdSEpC+yu7/DfLeulw4ZIjTZrmbFCpuyE72DLmc2hYXiIozqC7BfUX2MoKSnJ5OnRInfZ9atxa0ZQhrQVPG3pC8GtHawrZD5RP/mcP4htAcFGnK1MsWDCbTX7NAMI7sXIihjg9Imo1DlCkK6kKrwE4sMK8a89QkrUULauQ0qQI4N45fR6XsjTU/HZIlxWuGQCrkqlnyFpPccFR96ZZ/8ky63NfiZvCQcOOMavADpo5M4BfhbrriRwzf70JneH1lfYmqD3+8RQP85I0Olq2zcovBEk+R8J3lWfUWZ0Okm2yQfBPWW6FPTQsLnq1By0YwcX3w2mHkb7m26KomZnEbALJNRF0j+ziUwJ/qgtQI1wrn5PYRKbKnD4CIHQZVfNsClTdLzQdeP+QfWD/+l8UST/g0sHUcOK5vhVUhDWbujTzIej4rzBLOCOmcGIsX5WJRkDY6r12W8QnzrKcsllN50</div>
-<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog.">
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
 </div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
