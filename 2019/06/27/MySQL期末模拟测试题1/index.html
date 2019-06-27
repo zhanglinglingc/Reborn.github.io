@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="mysql数据库应用技术期中考试模拟试题 学号          姓名 第一部分  数据库操作（3个小题，共8分）1、创建数据库kaoshi   （3分）(character  set gbk;) 1Create datbase kaoshi; 2、显示数据库   （3分） 1show datbases; 3、打开/使用数据库   （2分） 第二部分 数据表操作（12个小题，共16分）一、cang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL期末模拟测试题1">
+<meta property="og:url" content="http://yoursite.com/2019/06/27/MySQL期末模拟测试题1/index.html">
+<meta property="og:site_name" content="reb0rn&#39;s blog">
+<meta property="og:description" content="mysql数据库应用技术期中考试模拟试题 学号          姓名 第一部分  数据库操作（3个小题，共8分）1、创建数据库kaoshi   （3分）(character  set gbk;) 1Create datbase kaoshi; 2、显示数据库   （3分） 1show datbases; 3、打开/使用数据库   （2分） 第二部分 数据表操作（12个小题，共16分）一、cang">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-06-27T01:16:22.575Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL期末模拟测试题1">
+<meta name="twitter:description" content="mysql数据库应用技术期中考试模拟试题 学号          姓名 第一部分  数据库操作（3个小题，共8分）1、创建数据库kaoshi   （3分）(character  set gbk;) 1Create datbase kaoshi; 2、显示数据库   （3分） 1show datbases; 3、打开/使用数据库   （2分） 第二部分 数据表操作（12个小题，共16分）一、cang">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/06/27/MySQL期末模拟测试题1/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>MySQL期末模拟测试题1 | reb0rn's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">reb0rn's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/MySQL期末模拟测试题1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="reb0rn">
+      <meta itemprop="description" content="我的征途是星辰大海">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="reb0rn's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MySQL期末模拟测试题1
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-27 09:08:23 / Modified: 09:16:22" itemprop="dateCreated datePublished" datetime="2019-06-27T09:08:23+08:00">2019-06-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>mysql数据库应用技术期中考试模拟试题</strong></p>
+<p>学号          姓名</p>
+<h1 id="第一部分-数据库操作（3个小题，共8分）"><a href="#第一部分-数据库操作（3个小题，共8分）" class="headerlink" title="第一部分  数据库操作（3个小题，共8分）"></a>第一部分  数据库操作（3个小题，共8分）</h1><p>1、创建数据库kaoshi   （3分）(character  set gbk;)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Create datbase kaoshi;</span><br></pre></td></tr></table></figure>
+<p>2、显示数据库   （3分）</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show datbases;</span><br></pre></td></tr></table></figure>
+<p>3、打开/使用数据库   （2分）</p>
+<h1 id="第二部分-数据表操作（12个小题，共16分）"><a href="#第二部分-数据表操作（12个小题，共16分）" class="headerlink" title="第二部分 数据表操作（12个小题，共16分）"></a>第二部分 数据表操作（12个小题，共16分）</h1><p>一、cangku表的定义（仓库表）</p>
+<p>1、创建cangku表（1分）</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table cangku (ckh varchar(<span class="number">8</span>) primary key, city varchar(<span class="number">8</span>), area int);</span><br></pre></td></tr></table></figure>
+<p>2、插入数据（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">insert into cangku values(<span class="string">'WH1'</span>,<span class="string">'北京'</span>,<span class="number">370</span>);</span><br><span class="line">insert into cangku values(<span class="string">'WH2'</span>,<span class="string">'上海'</span>,<span class="number">500</span>);</span><br><span class="line">insert into cangku values(<span class="string">'WH3'</span>,<span class="string">'广州'</span>,<span class="number">200</span>);</span><br><span class="line">insert into cangku values(<span class="string">'WH4'</span>,<span class="string">'武汉'</span>,<span class="number">400</span>);</span><br></pre></td></tr></table></figure></p>
+<p>3、显示cangku表中的数据（2分）</p>
+<p>二、Dingdan表的定义（订购单表）</p>
+<p>4、创建Dingdan表（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table Dingdan (dgdh varchar(<span class="number">8</span>) primary key, zgh varchar(<span class="number">8</span>), gysh varchar(<span class="number">8</span>),  dgrq char(<span class="number">8</span>));</span><br></pre></td></tr></table></figure></p>
+<p>5、插入数据（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">insert into Dingdan values(<span class="string">'OR67'</span>,<span class="string">'E3'</span>,<span class="string">'S7'</span>,<span class="string">'06/23/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR73'</span>,<span class="string">'E1'</span>,<span class="string">'S4'</span>,<span class="string">'07/28/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR76'</span>,<span class="string">'E5'</span>,<span class="string">'S4'</span>,<span class="string">'05/25/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR77'</span>,<span class="string">'E6'</span>,<span class="string">'S6'</span>,<span class="string">'05/26/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR79'</span>,<span class="string">'E3'</span>,<span class="string">'S4'</span>,<span class="string">'06/13/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR80'</span>,<span class="string">'E1'</span>,<span class="string">'S2'</span>,<span class="string">'08/29/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR90'</span>,<span class="string">'E3'</span>,<span class="string">'S3'</span>,<span class="string">'09/01/01'</span>);</span><br><span class="line">insert into Dingdan values(<span class="string">'OR91'</span>,<span class="string">'E3'</span>,<span class="string">'S7'</span>,<span class="string">'07/13/01'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>6、显示Dingdan表中的数据（2分）</p>
+<p>三、gys表的定义（供应商表）</p>
+<p>7、创建gys表（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table gys (gysh varchar(<span class="number">8</span>) primary key, gysname varchar(<span class="number">18</span>), gysadd varchar(<span class="number">8</span>));</span><br></pre></td></tr></table></figure></p>
+<p>8、插入数据（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">insert into gys values(<span class="string">'S2'</span>,<span class="string">'名硕电子公司'</span>,<span class="string">'苏州'</span>);</span><br><span class="line">insert into gys values(<span class="string">'S3'</span>,<span class="string">'振华电子厂'</span>,<span class="string">'西安'</span>);</span><br><span class="line">insert into gys values(<span class="string">'S4'</span>,<span class="string">'华通电子公司'</span>,<span class="string">'北京'</span>);</span><br><span class="line">insert into gys values(<span class="string">'S6'</span>,<span class="string">'607厂'</span>,<span class="string">'郑州'</span>);</span><br><span class="line">insert into gys values(<span class="string">'S7'</span>,<span class="string">'爱华电子厂'</span>,<span class="string">'北京'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>9、显示gys表中的数据（2分）</p>
+<p>四、zg表的定义（职工表）</p>
+<p>10、创建zg表（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table zg (zgh varchar(<span class="number">8</span>) primary key, ckh varchar(<span class="number">8</span>), gz int);</span><br></pre></td></tr></table></figure></p>
+<p>11、插入数据（1分）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">insert into zg values(<span class="string">'E1'</span>,<span class="string">'WH2'</span>,<span class="number">1220</span>);</span><br><span class="line">insert into zg values(<span class="string">'E3'</span>,<span class="string">'WH1'</span>,<span class="number">1210</span>);</span><br><span class="line">insert into zg values(<span class="string">'E4'</span>,<span class="string">'WH2'</span>,<span class="number">1250</span>);</span><br><span class="line">insert into zg values(<span class="string">'E5'</span>,<span class="string">'WH3'</span>,<span class="number">1230</span>);</span><br><span class="line">insert into zg values(<span class="string">'E6'</span>,<span class="string">'WH1'</span>,<span class="number">1250</span>);</span><br></pre></td></tr></table></figure></p>
+<p>12、显示gys表中的数据（2分）</p>
+<h1 id="第三部分-查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42-分）"><a href="#第三部分-查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42-分）" class="headerlink" title="第三部分 查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42 分）"></a>第三部分 查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42 分）</h1><p>1、在cangku表中,查询面积area大于400的仓库信息</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select * from cangku where area&gt;<span class="number">400</span>;</span><br></pre></td></tr></table></figure>
+<p>2、在zg表中，查询哪些职工的工资gz多于1210<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select * from where</span><br></pre></td></tr></table></figure></p>
+<p>3、在cangku表中,查询仓库号ckh是“WH1”或“WH2”并且面积area大于400的城市<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select city  from cangku where ck = ‘WH1’ <span class="keyword">or</span> area &gt;<span class="number">400</span> <span class="keyword">and</span> ck =’WH2’ <span class="keyword">or</span> area&gt;<span class="number">400</span></span><br></pre></td></tr></table></figure></p>
+<p>4、在cangku表中,查找出仓库面积area在400到600的仓库信息<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select * from cangku where between <span class="number">400</span> <span class="keyword">and</span> <span class="number">600</span>;</span><br></pre></td></tr></table></figure></p>
+<p>5、在gys表中,找出供应商名gysname中包含 “厂”的所有供应商的名</p>
+<p>6、在gys表中,找出地址gysadd不在西安的供应商</p>
+<p>Select * from<br>7、在cangku表中,找出城市city不在北京的仓库</p>
+<p>8、在zg表中，按工资gz降序排列出所有职工的信息<br>9、在zg表中，先按仓库号ckh升序排列，再按工资gz降序排列<br>10、在cangku表中,统计有几个仓库</p>
+<p>11、在cangku表中,求总的仓库面积</p>
+<p>12、在dingdan表中，计算每个职工zgh的订单数dgdh</p>
+<p>13、在zg表和ckh表中，找出在面积area大于400的仓库中工作的职工</p>
+<h1 id="第四部分-数据更新、插入、删除（4个小题，每小题3分，共12分）"><a href="#第四部分-数据更新、插入、删除（4个小题，每小题3分，共12分）" class="headerlink" title="第四部分 数据更新、插入、删除（4个小题，每小题3分，共12分）"></a>第四部分 数据更新、插入、删除（4个小题，每小题3分，共12分）</h1><p>1、插入两条数据到gys表中。(s8,宇视科技,山东),(s9,北京中标,广州)</p>
+<p>2、更新gys表中gysh为’s6’的记录的gysadd为’厦门’。</p>
+<p>3、更新gys表中gysname为’华通电子公司’的值为’华通电子通讯公司’。</p>
+<p>4、删除gys表中gysh为s8和s9的记录。</p>
+<h1 id="第五部分：索引和视图（7个小题，每小题3分，共21分）"><a href="#第五部分：索引和视图（7个小题，每小题3分，共21分）" class="headerlink" title="第五部分：索引和视图（7个小题，每小题3分，共21分）"></a>第五部分：索引和视图（7个小题，每小题3分，共21分）</h1><p>1、在dingdan表中dgdh字段上建立名为indexdh的索引。</p>
+<p>2、在gys表中gysh和gysname字段上建立名为indexgg的索引。</p>
+<p>3、删除gys表中名称为indexgg的索引文件</p>
+<p>4、创建视图：在cangku表中创建视图viewck面积大于等于400元的仓库信息</p>
+<p>5、显示视图viewck</p>
+<p>6、更新视图：通过建立的视图将“武汉”的面积增加50平方米。（ set  area=area+50）</p>
+<p>7、删除视图:删除viewck视图。</p>
+<h1 id="第六部分：登录和退出（每小题1分，共2分）"><a href="#第六部分：登录和退出（每小题1分，共2分）" class="headerlink" title="第六部分：登录和退出（每小题1分，共2分）"></a>第六部分：登录和退出（每小题1分，共2分）</h1><p>1、请写出登录mysql服务器的命令</p>
+<p>2、请写出退出mysql服务器的命令</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/27/2019第三届强网杯-WEB强网先锋-上单-wp/" rel="next" title="2019第三届强网杯-WEB强网先锋-上单-wp">
+                <i class="fa fa-chevron-left"></i> 2019第三届强网杯-WEB强网先锋-上单-wp
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="reb0rn">
+            
+              <p class="site-author-name" itemprop="name">reb0rn</p>
+              <div class="site-description motion-element" itemprop="description">我的征途是星辰大海</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/pumpkin9" title="https://segmentfault.com/u/pumpkin9" rel="noopener" target="_blank">pumpkin9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yml-sec.top" title="https://yml-sec.top" rel="noopener" target="_blank">夜莫离、</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.ruozhi.xyz/" title="https://blog.ruozhi.xyz/" rel="noopener" target="_blank">ruozhi</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://weifengbuzao.github.io/" title="https://weifengbuzao.github.io/" rel="noopener" target="_blank">Arjun</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一部分-数据库操作（3个小题，共8分）"><span class="nav-number">1.</span> <span class="nav-text">第一部分  数据库操作（3个小题，共8分）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二部分-数据表操作（12个小题，共16分）"><span class="nav-number">2.</span> <span class="nav-text">第二部分 数据表操作（12个小题，共16分）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三部分-查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42-分）"><span class="nav-number">3.</span> <span class="nav-text">第三部分 查询操作（13个小题，前10个小题，每小题3分，后3小题，每题4分共42 分）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四部分-数据更新、插入、删除（4个小题，每小题3分，共12分）"><span class="nav-number">4.</span> <span class="nav-text">第四部分 数据更新、插入、删除（4个小题，每小题3分，共12分）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五部分：索引和视图（7个小题，每小题3分，共21分）"><span class="nav-number">5.</span> <span class="nav-text">第五部分：索引和视图（7个小题，每小题3分，共21分）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六部分：登录和退出（每小题1分，共2分）"><span class="nav-number">6.</span> <span class="nav-text">第六部分：登录和退出（每小题1分，共2分）</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">reb0rn</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div> 
+   
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>
