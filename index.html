@@ -385,12 +385,24 @@
                 
               
 
-              <time title="Created: 2019-10-13 20:57:00 / Modified: 21:24:32" itemprop="dateCreated datePublished" datetime="2019-10-13T20:57:00+08:00">2019-10-13</time>
+              <time title="Created: 2019-10-13 20:57:00" itemprop="dateCreated datePublished" datetime="2019-10-13T20:57:00+08:00">2019-10-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-14 08:41:00" itemprop="dateModified" datetime="2019-10-14T08:41:00+08:00">2019-10-14</time>
               
             
           </span>
@@ -447,7 +459,8 @@
             <p>
               SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞
 假设登录框处的判断代码如下：
-SELECT * FROM admin where name=&#39;&quot;.$_POST[&#39;name&#39;].&quot;&#39;and password=&#39;&quot;.$_POS
+SELECT * FROM admin where name='".$_POST['name']."'and password='".$_POST['password']"';
+在账号框中输入admin&#39;o
               ...
             </p>
           <!--noindex-->

