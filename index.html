@@ -402,7 +402,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-14 08:41:00" itemprop="dateModified" datetime="2019-10-14T08:41:00+08:00">2019-10-14</time>
+                <time title="Modified: 2019-10-14 09:16:40" itemprop="dateModified" datetime="2019-10-14T09:16:40+08:00">2019-10-14</time>
               
             
           </span>
@@ -458,9 +458,14 @@
           
             <p>
               SQL注入之万能密码漏洞第一道题是牵扯到了万能密码漏洞
-假设登录框处的判断代码如下：
-SELECT * FROM admin where name='".$_POST['name']."'and password='".$_POST['password']"';
-在账号框中输入admin&#39;o
+用户名先输入个’
+返回了sql报错语句,猜测存在sql注入漏洞
+
+使用万能密码测试
+登陆成功
+
+原理假设登录框处的判断代码如下：
+SELECT * FROM admin where name='".$_POST['name']."'and pa
               ...
             </p>
           <!--noindex-->
