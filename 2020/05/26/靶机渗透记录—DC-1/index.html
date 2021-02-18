@@ -580,7 +580,7 @@
 <li>cp</li>
 </ul>
 <p>参考文章：<a href="https://blog.csdn.net/qq_36119192/article/details/84872644" target="_blank" rel="noopener">https://blog.csdn.net/qq_36119192/article/details/84872644</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>以下命令将尝试查找具有root权限的SUID的文件，不同系统适用于不同的命令，一个一个试</span><br><span class="line">find / -perm -u=s -type f 2&gt;/dev/null</span><br><span class="line">find / -user root -perm -4000-print2&gt;/dev/null</span><br><span class="line">find / -user root -perm -4000-exec ls -ldb &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">以下命令将尝试查找具有root权限的SUID的文件，不同系统适用于不同的命令，一个一个试</span></span><br><span class="line">find / -perm -u=s -type f 2&gt;/dev/null</span><br><span class="line">find / -user root -perm -4000-print2&gt;/dev/null</span><br><span class="line">find / -user root -perm -4000-exec ls -ldb &#123;&#125; \;</span><br></pre></td></tr></table></figure>
 <p>发现find是具有root用户权限的SUID文件 </p>
 <p><img src="http://images.5666888.xyz//20200423125125.png" alt></p>
 <p><code>/usr/bin/find examples.desktop -exec whoami \;</code></p>
@@ -632,8 +632,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/26/靶机渗透记录—Lampiao/" rel="next" title="靶机渗透记录—Lampiao">
-                <i class="fa fa-chevron-left"></i> 靶机渗透记录—Lampiao
+              <a href="/2020/05/26/靶机渗透记录—CH4INRULZ-v1-0-1/" rel="next" title="靶机渗透记录—CH4INRULZ_v1.0.1">
+                <i class="fa fa-chevron-left"></i> 靶机渗透记录—CH4INRULZ_v1.0.1
               </a>
             
           </div>
@@ -642,8 +642,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/17/物联网考试/" rel="prev" title="物联网考试">
-                物联网考试 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/26/靶机渗透记录—Lampiao/" rel="prev" title="靶机渗透记录—Lampiao">
+                靶机渗透记录—Lampiao <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -720,7 +720,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -925,7 +925,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
